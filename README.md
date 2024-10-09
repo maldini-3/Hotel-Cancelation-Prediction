@@ -1,20 +1,18 @@
-# Hotel-Cancelation-Prediction
-1. Project Title
-Hotel Cancellation Prediction
-2. Project Description
-Start by giving a brief explanation of the project's purpose and the problem it solves. Here’s an example:
+# Hotel Cancellation Prediction
+Project Overview
+This project aims to predict if a customer will cancel their hotel booking or not. Accurately forecasting cancellations helps hotels manage bookings more effectively, reducing the financial impact of last-minute cancellations and optimizing resource allocation.
 
-This project aims to predict whether a hotel booking will be canceled or not using a machine learning model. The model is trained on historical data that includes customer booking details and hotel-related features. By accurately predicting cancellations, hotels can manage bookings better, reduce financial losses, and optimize resource allocation.
-
-3. Key Features
-List the key features and technologies used in your project:
-
-One-hot encoding of categorical data
-Outlier handling using Z-score method
-Feature selection to keep the most relevant features
-Hyperparameter tuning using RandomizedSearchCV
-Handling class imbalance with random oversampling
-RandomForestClassifier for prediction
-Model evaluation using cross-validation
-Model accuracy of 94% on the test set
-Model saved using the pickle library for easy reusability
+Workflow Summary
+Data Preprocessing
+One-Hot Encoding: Categorical variables were transformed into numerical form using one-hot encoding to make the data compatible with machine learning algorithms.
+Outlier Handling: Outliers were managed using the Z-score method to improve model robustness and prevent skewed predictions.
+Feature Selection: Only the most relevant features were selected to streamline the model and enhance performance.
+Model Development
+Hyperparameter Tuning: The model's hyperparameters were optimized using RandomizedSearchCV to identify the best configuration for the RandomForestClassifier.
+Random Oversampling: To address class imbalance (since cancellations are less frequent than non-cancellations), random oversampling was applied to balance the dataset.
+Random Forest Classifier: The RandomForestClassifier was chosen for its strong predictive capabilities, especially when dealing with both categorical and numerical data. It also provides insights into feature importance, helping understand what factors influence cancellations.
+Cross-Validation: Cross-validation was applied to the training dataset to evaluate model performance and ensure it generalizes well to unseen data.
+Results
+The model achieved an accuracy of 94% on the test set, demonstrating high accuracy in predicting whether a customer will cancel their booking or not.
+Model Saving
+The trained model was saved using the pickle library, enabling easy reloading and use in production environments.
